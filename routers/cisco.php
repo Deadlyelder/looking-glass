@@ -66,7 +66,7 @@ class Cisco extends Router {
     }
 
     $cmd = new CommandBuilder();
-    $cmd->add('ping', $parameter, 'repeat 10');
+    $cmd->add('ping', $parameter, 'count 10');
 
     if ($this->has_source_interface_id()) {
       $cmd->add('source', $this->get_source_interface_id());
